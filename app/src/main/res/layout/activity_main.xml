@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="20dp">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="WA Notification Forwarder" android:textSize="25sp"
+        android:textStyle="bold" android:textColor="#111827"/>
+
+    <TextView android:id="@+id/status" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="8dp"
+        android:text="Select Source or Receiver" android:textColor="#6B7280"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="22dp" android:text="MODE" android:textStyle="bold"/>
+
+    <RadioGroup android:id="@+id/modeGroup" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal">
+        <RadioButton android:id="@+id/sourceMode" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="SOURCE"/>
+        <RadioButton android:id="@+id/receiverMode" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="RECEIVER"/>
+    </RadioGroup>
+
+    <EditText android:id="@+id/topic" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="12dp"
+        android:hint="Private shared topic ID" android:inputType="text"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="18dp" android:text="SOURCE APP 1 PREFIX"
+        android:textStyle="bold"/>
+    <EditText android:id="@+id/prefix1" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="Sandhya msg received"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" android:text="SOURCE APP 2 PREFIX"
+        android:textStyle="bold"/>
+    <EditText android:id="@+id/prefix2" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="Niti msg received"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="18dp" android:text="SOURCE PACKAGES"
+        android:textStyle="bold"/>
+    <EditText android:id="@+id/package1" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="WhatsApp package name"/>
+    <EditText android:id="@+id/package2" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="WhatsApp Clone package name"
+        android:layout_marginTop="6dp"/>
+
+    <Button android:id="@+id/save" android:layout_width="match_parent"
+        android:layout_height="55dp" android:layout_marginTop="20dp"
+        android:text="SAVE SETTINGS"/>
+
+    <Button android:id="@+id/activate" android:layout_width="match_parent"
+        android:layout_height="55dp" android:layout_marginTop="10dp"
+        android:text="ACTIVATE SELECTED MODE"/>
+
+    <Button android:id="@+id/notificationAccess" android:layout_width="match_parent"
+        android:layout_height="55dp" android:layout_marginTop="10dp"
+        android:text="OPEN NOTIFICATION ACCESS"/>
+
+    <TextView android:id="@+id/help" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="18dp"
+        android:text="SOURCE: Android Notification Access reads notifications from the selected WhatsApp packages and forwards the notification text over the internet. RECEIVER: listens to the shared topic and shows the forwarded message as a local notification. Keep the same private topic on both phones."
+        android:textColor="#374151"/>
+</LinearLayout>
+</ScrollView>
